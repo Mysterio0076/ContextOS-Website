@@ -7,6 +7,135 @@
 <meta name="description" content="ContextOS — a focused desktop workspace for projects, notes, and tasks.">
 <title>ContextOS — Your workspace, sketched out</title>
 <style>
+  ```css
+/* ===== CREATOR SECTION ===== */
+
+.creator-section {
+  padding: 75px 0;
+  border-top: 1px solid var(--line);
+}
+
+.creator-card {
+  position: relative;
+  max-width: 850px;
+  margin: 0 auto;
+  padding: 42px;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+.creator-card::before {
+  content: "MADE WITH CARE";
+  position: absolute;
+  top: 20px;
+  right: -28px;
+  padding: 5px 35px;
+  background: #e8eddf;
+  color: var(--accent-dark);
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  transform: rotate(35deg);
+}
+
+.creator-label {
+  display: inline-block;
+  margin-bottom: 15px;
+  color: var(--accent-dark);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.creator-name {
+  margin-bottom: 12px;
+  font-size: clamp(29px, 4vw, 42px);
+  line-height: 1.15;
+  letter-spacing: -1.5px;
+}
+
+.creator-name span {
+  color: var(--accent);
+  font-family: Georgia, "Times New Roman", serif;
+  font-style: italic;
+  font-weight: 500;
+}
+
+.creator-description {
+  max-width: 580px;
+  margin-bottom: 25px;
+  color: var(--muted);
+  font-size: 15px;
+}
+
+.creator-details {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 25px;
+}
+
+.creator-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  padding: 11px 15px;
+  border: 1px solid var(--line);
+  border-radius: 7px;
+  background: var(--paper);
+  color: var(--ink);
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 650;
+  overflow-wrap: anywhere;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.creator-link:hover {
+  background: #e8eddf;
+  transform: translateY(-2px);
+}
+
+.creator-link .creator-icon {
+  color: var(--accent-dark);
+  font-size: 17px;
+}
+
+.creator-signature {
+  margin-top: 30px;
+  padding-top: 18px;
+  border-top: 1px dashed var(--line);
+  color: var(--muted);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 14px;
+  font-style: italic;
+}
+
+@media (max-width: 600px) {
+  .creator-card {
+    padding: 28px 22px;
+  }
+
+  .creator-card::before {
+    top: 15px;
+    right: -34px;
+    font-size: 8px;
+  }
+
+  .creator-details {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .creator-link {
+    justify-content: flex-start;
+  }
+}
+```
 :root {
   --purple:#7657d5;
   --paper:#f7f0df;
@@ -300,6 +429,68 @@ h2 { font-size:clamp(2rem,3.5vw,3.1rem); margin:13px 0 14px; line-height:1.08; }
     });
   });
 })();
+<!-- ===== MEET THE CREATOR ===== -->
+<section id="creator" class="creator-section">
+  <div class="page">
+    <div class="creator-card">
+
+      <span class="creator-label">Behind the workspace</span>
+
+      <h2 class="creator-name">
+        Meet the <span>Creator.</span>
+      </h2>
+
+      <p class="creator-description">
+        Hey, I'm Hasintha Vignesh D — the creator behind ContextOS.
+        I'm passionate about technology, software development, and
+        building useful digital experiences. ContextOS is my step
+        toward creating tools that make everyday work feel simpler
+        and more organized.
+      </p>
+
+      <div class="creator-details">
+
+        <a
+          class="creator-link"
+          href="mailto:hasinthavigneshd@gmail.com"
+        >
+          <span class="creator-icon" aria-hidden="true">✉</span>
+          <span>hasinthavigneshd@gmail.com</span>
+        </a>
+
+        <a
+          class="creator-link"
+          href="https://www.instagram.com/theaverageguy44/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <span class="creator-icon" aria-hidden="true">◎</span>
+          <span>Instagram · @theaverageguy44 ↗</span>
+        </a>
+
+        <a
+          class="creator-link"
+          href="https://github.com/Mysterio0076/ContextOS-App"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <span class="creator-icon" aria-hidden="true">⌘</span>
+          <span>Explore ContextOS on GitHub ↗</span>
+        </a>
+
+      </div>
+
+      <p class="creator-signature">
+        Designed with curiosity. Built one step at a time.
+        <br>
+        — Hasintha Vignesh D
+      </p>
+
+    </div>
+  </div>
+</section>
+<!-- ===== END CREATOR SECTION ===== -->
+```
 </script>
 </body>
 </html>
